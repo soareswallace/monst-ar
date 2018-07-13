@@ -19,12 +19,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var foundSurface = false
     var gamePos = SCNVector3Make(0.0, 0.0, 0.0)
     
-    var score = 0 {
-        didSet{
-            scoreLabel.text =
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -106,7 +100,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             trackerNode.removeFromParentNode()
             gameHasStarted = true
             
-            scoreLabel = UILabel(frame: CGRect()
             
             mainContainer = sceneView.scene.rootNode.childNode(withName: "mainContainer", recursively: false)!
             mainContainer.isHidden = false
